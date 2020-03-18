@@ -52,12 +52,40 @@ namespace InheritanceIntro
 
             Duck duck = new Duck(28, "Daffy");
             duck.SayName();
+
+            Frog frog = new Frog(14, "Kermit", false);
+            frog.SayName();
+
+            Kangaroo roo = new Kangaroo(5, "Jerry");
+            roo.SayName();
         }
 
         private void Quack_Button_Click(object sender, RoutedEventArgs e)
         {
             Duck duck = new Duck();
             duck.Quack();
+        }
+
+        private void Ribbit_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Frog frog = new Frog();
+            frog.Ribbit();
+        }
+
+        private void Box_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Random rand = new Random();
+            int pounds = rand.Next(1, 300);
+            Kangaroo roo = new Kangaroo(pounds);
+            roo.Box();
+        }
+
+        private void AgeFinder_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Random rand = new Random();
+            int rings = rand.Next(1, 50);
+            Tree tree = new Tree(rings);
+            tree.AgeFinder();
         }
     }
 }

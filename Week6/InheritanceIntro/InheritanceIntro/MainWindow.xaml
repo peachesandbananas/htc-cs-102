@@ -11,5 +11,8 @@
         <Button Click="Bark_Button_Click">Bark</Button>
         <Button Click="SayName_Button_Click">Say Name</Button>
         <Button Click="Quack_Button_Click">Quack</Button>
+        <Button Click="Ribbit_Button_Click">Ribbit</Button>
+        <Button Click="Box_Button_Click">Box</Button>
+        <Button Click="AgeFinder_Button_Click">Age Finder</Button>
     </StackPanel>
 </Window>
