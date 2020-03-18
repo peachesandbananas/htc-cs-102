@@ -1,0 +1,16 @@
+﻿<Window x:Class="CS101Review.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CS101Review"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="300" Width="300">
+    <StackPanel>
+        <TextBlock Margin="10,25,10,10" HorizontalAlignment="Center">Enter your name:</TextBlock>
+        <TextBox Height="20" Width="200" Name="txtName"></TextBox>
+        <TextBlock Margin="10,25,10,10" HorizontalAlignment="Center">Enter your age:</TextBlock>
+        <TextBox Height="20" Width="100" Name="txtAge">0</TextBox>
+        <Button Height="25" Width="75" Margin="0,10,0,5" Click="Button_Click">Say Hello</Button>
+    </StackPanel>
+</Window>
