@@ -16,7 +16,7 @@ namespace MovieList
             set;
         }
 
-        public void ShowDetails()
+        public virtual void ShowDetails() //What does virtual mean? Virtual is just a keyword used to signify that a derived class can override this method. 
         {
             string infoString = "Title: " + this.Title;
             infoString += "\nRelease Year: " + this.ReleaseYear;

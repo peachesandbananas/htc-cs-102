@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InheritanceIntro
 {
-    class Object2
+    public class Object2
     {
         private object value;
 

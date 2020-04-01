@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MovieList"
         mc:Ignorable="d"
-        Title="MainWindow" Height="900" Width="525">
+        Title="MainWindow" Height="400" Width="525">
     <StackPanel Margin="10,10,10,10">
         <ListView Name="lvMovies" Height="150px" Margin="0,0,0,10" MouseDoubleClick="lvMovies_MouseDoubleClick">
             <ListView.View>
@@ -15,18 +15,24 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <TextBlock>Title</TextBlock>
+        <!--<TextBlock>Title</TextBlock>
         <TextBox Name="titleInput" Margin="0,0,0,15"></TextBox>
         <TextBlock>Release Year</TextBlock>
         <TextBox Name="releaseYearInput" Margin="0,0,0,15"></TextBox>
-        <Button Click="AddButton_Click" HorizontalAlignment="Center" Margin="0,0,0,10">Add</Button>
+        <Button Click="AddButton_Click" HorizontalAlignment="Center" Margin="0,0,0,10">Add</Button>-->
         
         <!-- Border surrounding Animated Movie options -->
-        <Border BorderThickness="1" BorderBrush="Gray" Padding="8">
+        <!--<Border BorderThickness="1" BorderBrush="Gray" Padding="8">
             <StackPanel>
-                <!-- Put Animated Movie options in here -->
-                
+                <TextBlock>Animation Studio</TextBlock>
+                <TextBox Name ="animationStudioInput" Margin="0,0,0,15"></TextBox>
+                <TextBlock>Animation Type</TextBlock>
+                <TextBox Name ="animationTypeInput" Margin="0,0,0,15"></TextBox>
+                <Button HorizontalAlignment="Center" Margin="0,0,0,10" Click="AddAnimatedButton_Click">Add Animated Movie</Button>
             </StackPanel>
-        </Border>
+        </Border>-->
+        <Button Click="AddButton_Click" HorizontalAlignment="Center" Margin="0,0,0,10">Add Movie</Button>
+        <Button HorizontalAlignment="Center" Margin="0,0,0,10" Click="AddAnimatedButton_Click">Add Animated Movie</Button>
+        <Button HorizontalAlignment="Center" Margin="0,0,0,10" Click="ShowButton_Click">Show Details</Button>
     </StackPanel>
 </Window>

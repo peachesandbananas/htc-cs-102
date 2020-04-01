@@ -55,10 +55,25 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="AddAnimatedMovie.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddMovie.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="AddAnimatedMovie.xaml.cs">
+      <DependentUpon>AddAnimatedMovie.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddMovie.xaml.cs">
+      <DependentUpon>AddMovie.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AnimatedMovie.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>

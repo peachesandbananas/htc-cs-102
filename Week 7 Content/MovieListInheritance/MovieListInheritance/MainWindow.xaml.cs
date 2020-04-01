@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MovieListInheritance; //Why do I have to do this?
 
 namespace MovieList
 {
@@ -21,7 +22,10 @@ namespace MovieList
     /// </summary>
     public partial class MainWindow : Window
     {
-        private ObservableCollection<Movie> MovieList;
+        public static ObservableCollection<Movie> MovieList;
+        public string webpageTitle;
+        public char[] webpageTitleArray;
+        AddMovie AddMovieForm = new AddMovie();
 
         public MainWindow()
         {
@@ -29,23 +33,48 @@ namespace MovieList
 
             MovieList = new ObservableCollection<Movie>();
             lvMovies.ItemsSource = MovieList;
+            
         }
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-            Movie movieToAdd = new Movie(titleInput.Text, int.Parse(releaseYearInput.Text));
+            //try
+            //{
+            //    Movie movieToAdd = new Movie(titleInput.Text, int.Parse(releaseYearInput.Text));
 
-            MovieList.Add(movieToAdd);
+            //    MovieList.Add(movieToAdd);
 
-            titleInput.Clear();
-            releaseYearInput.Clear();
+            //    titleInput.Clear();
+            //    releaseYearInput.Clear();
+            //}
+            //catch (System.FormatException)
+            //{
+            //    MessageBox.Show("Please enter a valid year");
+            //}
+            AddMovie AddMovieForm = new AddMovie();
+            AddMovieForm.Show();
         }
 
         private void ShowButton_Click(object sender, RoutedEventArgs e)
         {
             foreach (Movie m in MovieList)
             {
-                m.ShowDetails();
+                webpageTitle = "";
+                //m.ShowDetails();
+                webpageTitleArray = m.Title.ToCharArray();
+                for (int i = 0; i < webpageTitleArray.Length; i++)
+                {
+                    if (webpageTitleArray[i] == ' ')
+                    {
+                        webpageTitleArray[i] = '_';
+                        webpageTitle += webpageTitleArray[i].ToString();
+                    }
+                    else
+                    {
+                        webpageTitle += webpageTitleArray[i].ToString();
+                    }
+                }
+                System.Diagnostics.Process.Start("http://www.wikipedia.org/wiki/" + webpageTitle);
             }
         }
 
@@ -56,6 +85,24 @@ namespace MovieList
             {
                 selectedMovie.ShowDetails();
             }
+        }
+
+        private void AddAnimatedButton_Click(object sender, RoutedEventArgs e)
+        {
+            //string animationStudio = animationStudioInput.Text;
+            //string animationType = animationTypeInput.Text;
+            //MovieListInheritance.AnimatedMovie animatedMovieToAdd = new MovieListInheritance.AnimatedMovie(titleInput.Text, Convert.ToInt32(releaseYearInput.Text), animationStudio, animationType);
+            //
+            ////Why do I have to add the MovieListInheritance.? MAKE SURE TO ASK THIS QUESTION
+            //
+            //MovieList.Add(animatedMovieToAdd);
+            //titleInput.Clear();
+            //releaseYearInput.Clear();
+            //animationStudioInput.Clear();
+            //animationTypeInput.Clear();
+
+            AddAnimatedMovie AddAnimatedForm = new AddAnimatedMovie();
+            AddAnimatedForm.Show();
         }
     }
 }
