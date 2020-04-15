@@ -10,7 +10,7 @@ namespace InheritanceIntro
     class Duck : Animal
     {
 
-        public void Quack()
+        public override void Speak()
         {
             MessageBox.Show("Quack");
         }
@@ -20,10 +20,11 @@ namespace InheritanceIntro
 
         }
 
-        public Duck(int height, string name)
+        public Duck(int height, string name, int weight)
         {
             Height = height;
             Name = name;
+            Weight = weight;
         }
     }
 }

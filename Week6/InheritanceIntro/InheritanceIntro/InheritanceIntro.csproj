@@ -54,8 +54,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AnimalInfo.xaml.cs">
+      <DependentUpon>AnimalInfo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Object2.cs" />
     <Compile Include="Tree.cs" />
+    <Page Include="AnimalInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

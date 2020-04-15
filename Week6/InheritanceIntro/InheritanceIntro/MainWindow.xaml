@@ -7,11 +7,17 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="650" Width="700">
     <StackPanel>
+        <ListView Name="lvAnimals" Height="150px" Margin="0,0,0,10" MouseDoubleClick="lvAnimals_MouseDoubleClick">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="150" Header="Name" DisplayMemberBinding="{Binding Name}"></GridViewColumn>
+                    <GridViewColumn Width="100" Header="Height" DisplayMemberBinding="{Binding Height}"></GridViewColumn>
+                    <GridViewColumn Width="100" Header="Weight" DisplayMemberBinding="{Binding Weight}"></GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
         <Image Source="dog.jpg" Width="700"/>
-        <Button Click="Bark_Button_Click">Bark</Button>
         <Button Click="SayName_Button_Click">Say Name</Button>
-        <Button Click="Quack_Button_Click">Quack</Button>
-        <Button Click="Ribbit_Button_Click">Ribbit</Button>
         <Button Click="Box_Button_Click">Box</Button>
         <Button Click="AgeFinder_Button_Click">Age Finder</Button>
     </StackPanel>
