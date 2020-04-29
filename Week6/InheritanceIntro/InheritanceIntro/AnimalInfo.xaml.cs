@@ -23,6 +23,7 @@ namespace InheritanceIntro
         {
             InitializeComponent();
             //old method
+            //
             //if (animal.Name == "Kermit")
             //{
             //    AnimalImage.Source = new BitmapImage(new Uri(@"D:\dell_kev_dec122019\kxu\Hyland\C# 102\Polymorphism Images\kermit.jfif"));
