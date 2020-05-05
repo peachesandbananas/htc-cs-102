@@ -5,18 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HylandFinalProjectCSharp102"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Background="Black"> 
+        Title="MainWindow" Height="484.426" Width="800" Background="Black">
     <Grid>
-        <Label HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Goudy Old Style" FontWeight="Bold" FontSize="18" Foreground="Red" Background="Black">WHERE IN THE WORLD IS CARMEN SANDIEGO?</Label>
-        <Image HorizontalAlignment="Left" Width="500" Height="350" Margin="25,50,0,0" VerticalAlignment="Top" />
-        <GroupBox HorizontalAlignment="Right" Height="240" Width="225" Margin="0,40,25,0" VerticalAlignment="Top" Header="Information" Foreground="White">
-            <TextBlock Name="txtInformation" Foreground="White" TextWrapping="Wrap">PLACEHOLDER</TextBlock>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Goudy Old Style" FontWeight="Bold" FontSize="18" Foreground="Red" Background="Black" Margin="0,40,0,0">WHERE IN THE WORLD IS BENNY ALAMO?</Label>
+        <Image HorizontalAlignment="Left" Width="470" Height="350" Margin="25,77,0,0" VerticalAlignment="Top" Name ="imgCountry" Stretch="UniformToFill"/>
+        <GroupBox HorizontalAlignment="Right" Height="272" Width="250" Margin="0,72,25,0" VerticalAlignment="Top" Header="Information" Foreground="White">
+            <TextBlock Name="txtInformation" Foreground="White" TextWrapping="Wrap" Margin="0,0,0,0">PLACEHOLDER</TextBlock>
         </GroupBox>
-        <Canvas HorizontalAlignment="Right" Height="125" Width="225" Margin="0,0,25,5" VerticalAlignment="Bottom">
-            <Button Name="btnTravel" Height="25" Width="225" Margin="0,0,0,0" Click="btnTravel_Click">Travel to</Button>
-            <Button Name="btnAsk" Height="25" Width="225" Margin="0,30,0,0" Click="btnAsk_Click">Ask around</Button>
-            <Button Name="btnSearch" Height="25" Width="225" Margin="0,60,0,0" Click="btnSearch_Click">Search the area</Button>
-            <Button Name="btnAtlas" Height="25" Width="225" Margin="0,90,0,0" Click="Atlas_Click">Use Atlas</Button>
+        <Canvas HorizontalAlignment="Right" Height="125" Width="250" Margin="0,0,25,5" VerticalAlignment="Bottom">
+            <Button Name="btnTravel" Height="25" Width="250" Margin="0,0,0,0" Click="btnTravel_Click" Canvas.Top="60">Travel to</Button>
+            <Button Name="btnAsk" Height="25" Width="250" Click="btnAsk_Click" Canvas.Top="30">Ask around</Button>
+            <Button Name="btnAtlas" Height="25" Width="250" Margin="0,90,0,0" Click="Atlas_Click">Use Atlas</Button>
         </Canvas>
     </Grid>
 </Window>
